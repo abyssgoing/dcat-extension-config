@@ -13,7 +13,7 @@ class CreateDconfigTable extends Migration
      */
     public function up()
     {
-        Schema::create('llconfig', function (Blueprint $table) {
+        Schema::create('ll_configs', function (Blueprint $table) {
             $table->id();
             $table->string('name')->comment('变量名')->unique();
             $table->tinyInteger('type')->default(0)->comment('类型');
@@ -31,6 +31,6 @@ class CreateDconfigTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('llconfig');
+        Schema::dropIfExists('ll_configs');
     }
 }

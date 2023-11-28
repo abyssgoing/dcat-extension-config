@@ -1,5 +1,5 @@
 {
-    "name": "ll/dcat-config",
+    "name": "ll/dcat-extension-config",
     "alias": "系统变量配置管理",
     "description": "用于配置系统中各种的动态变量",
     "type": "library",

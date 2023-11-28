@@ -15,7 +15,7 @@ class DcatConfigServiceProvider extends ServiceProvider
 
     protected $menu = [
         [
-            'title' => '系统变量配置',
+            'title' => 'Config',
             'uri'   => 'llconfig',
             'icon'  => 'fa-gear', // 图标可以留空
         ],
