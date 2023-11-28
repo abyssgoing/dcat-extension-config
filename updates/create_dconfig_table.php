@@ -13,15 +13,17 @@ class CreateDconfigTable extends Migration
      */
     public function up()
     {
-        Schema::create('ll_configs', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->comment('变量名')->unique();
-            $table->tinyInteger('type')->default(0)->comment('类型');
-            $table->string('value')->comment('键值')->nullable();
-            $table->text('option')->comment('选项:select,radio等选择类型的数据')->nullable();
-            $table->text('description')->comment('说明')->nullable();
-            $table->timestamps();
-        });
+        if (! Schema::hasTable('ll_configs') ) {
+            Schema::create('ll_configs', function (Blueprint $table) {
+                $table->id();
+                $table->string('name')->comment('变量名')->unique();
+                $table->tinyInteger('type')->default(0)->comment('类型');
+                $table->string('value')->comment('键值')->nullable();
+                $table->text('option')->comment('选项:select,radio等选择类型的数据')->nullable();
+                $table->text('description')->comment('说明')->nullable();
+                $table->timestamps();
+            });
+        }
     }
 
     /**

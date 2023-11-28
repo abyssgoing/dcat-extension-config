@@ -14,7 +14,6 @@
 composer require abyssgoing/dcat-extension-config
 ```
 
-### Manually
 Enable the extension under `Backend -> Helpers -> Extensions`
 
 ## View
