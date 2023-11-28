@@ -11,7 +11,7 @@
 ### Composer installation
 
 ```bash
-composer require ll/dcat-extension-config
+composer require abyssgoing/dcat-extension-config
 ```
 
 ### Manually
