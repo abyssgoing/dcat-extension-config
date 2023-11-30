@@ -8,19 +8,19 @@ use Dcat\Admin\Grid;
 use Dcat\Admin\Http\Controllers\AdminController;
 use Ll\DcatConfig\Models\LlConfig;
 use Str;
+use Ll\DcatConfig\DcatConfigServiceProvider;
 
 class DcatConfigController extends AdminController
 {
     public function title()
     {
-        return '系统变量配置';
+        return DcatConfigServiceProvider::trans('basic.title');
     }
 
     public function index(Content $content)
     {
         return $content
             ->title($this->title())
-            ->description('config("变量名") 获取变量名对应的值')
             ->body($this->grid());
     }
 

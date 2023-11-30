@@ -31,6 +31,9 @@ class DcatConfigServiceProvider extends ServiceProvider
 		parent::init();
 
 		//
+		$this->publishes([
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/'. $this->getName()),
+        ]);
 
 	}
 
